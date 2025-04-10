@@ -1,26 +1,29 @@
-#Mobile Regex
+# Mobile Regex
 mobile_regex = /^\d{10}$/
-puts "1234567890".match?(mobile_regex)  
-puts "+1 (123) 456-7890".match?(mobile_regex)  
-puts "12345".match?(mobile_regex)  
-#Email Regex
+puts "Enter a mobile number:"
+mobile_input = gets.chomp
+puts mobile_input.match?(mobile_regex) ? "Valid mobile number" : "Invalid mobile number"
+
+# Email Regex
 email_regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-puts "example@example.com".match?(email_regex) 
-puts "example@com".match?(email_regex)  
-#Name Regex
+puts "Enter an email address:"
+email_input = gets.chomp
+puts email_input.match?(email_regex) ? "Valid email address" : "Invalid email address"
+
+# Name Regex
 name_regex = /^[a-zA-Z\s\-]+$/
-puts "John Doe".match?(name_regex)  
-puts "Mary-Jane".match?(name_regex)  
-puts "1234".match?(name_regex)  
-#Gender Regex
+puts "Enter a name:"
+name_input = gets.chomp
+puts name_input.match?(name_regex) ? "Valid name" : "Invalid name"
+
+# Gender Regex
 gender_regex = /^[MF]$/
-puts "M".match?(gender_regex)  
-puts "F".match?(gender_regex)  
-puts "Male".match?(gender_regex)  
-#Amount Regex
+puts "Enter gender (M/F):"
+gender_input = gets.chomp
+puts gender_input.match?(gender_regex) ? "Valid gender" : "Invalid gender"
+
+# Amount Regex
 amount_regex = /^\d{1,3}(?:,\d{3})*(?:\.\d{2})?$/
-puts "1,234.56".match?(amount_regex)  
-puts "1000".match?(amount_regex)  
-puts "1,000,000.99".match?(amount_regex)  
-puts "1234.567".match?(amount_regex)  
-puts "1000.123".match?(amount_regex) 
+puts "Enter an amount (e.g. 1,234.56):"
+amount_input = gets.chomp
+puts amount_input.match?(amount_regex) ? "Valid amount" : "Invalid amount"
