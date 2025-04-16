@@ -1,13 +1,15 @@
 class Human
-  def Indentity
+  def indentity
     puts "I am a human"
   end
 end
+
 class Student<Human
-  def Indentity
+  def indentity
     super
     puts "I am a Student too"
   end
 end
+
 student=Student.new
-student.Indentity
+student.indentity
